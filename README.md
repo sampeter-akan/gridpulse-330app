@@ -22,6 +22,16 @@ GridPulse 330 addresses this operational challenge by coupling **anticipatory me
 
 ---
 
+## System Architecture & Technical Data Flow
+
+<div align="center">
+  <img src="gridpulse-330app.jpg" alt="GridPulse 330: DevOps Power Grid Telemetry & Alert Console — Technical System Architecture and Data Flow" width="100%" />
+</div>
+
+*Figure 1: End-to-end 4-level telemetry and contingency pipeline — from meteorological Doppler radar ingestion down to closed-loop operator remedial dispatch.*
+
+---
+
 ## The Engineering Problem: High-Voltage Grid Volatility
 
 When bulk transmission corridors experience unexpected severe weather events, standard monitoring dashboards fail to equip operators with causal clarity. GridPulse 330 models two foundational electrical phenomena:

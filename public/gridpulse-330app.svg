@@ -1,0 +1,279 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050b14"/>
+      <stop offset="50%" stop-color="#0a1322"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+
+    <!-- Card 1 Blue Gradient -->
+    <linearGradient id="card1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d2442"/>
+      <stop offset="50%" stop-color="#0e315b"/>
+      <stop offset="100%" stop-color="#08182c"/>
+    </linearGradient>
+
+    <!-- Card 2 Teal Gradient -->
+    <linearGradient id="card2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#082b35"/>
+      <stop offset="50%" stop-color="#0b3f4d"/>
+      <stop offset="100%" stop-color="#051c23"/>
+    </linearGradient>
+
+    <!-- Card 3 Red Gradient -->
+    <linearGradient id="card3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3d0e14"/>
+      <stop offset="50%" stop-color="#55141c"/>
+      <stop offset="100%" stop-color="#28090d"/>
+    </linearGradient>
+
+    <!-- Card 4 Amber Gradient -->
+    <linearGradient id="card4Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#382109"/>
+      <stop offset="50%" stop-color="#4d2f0f"/>
+      <stop offset="100%" stop-color="#251605"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <polygon points="1,1 7,4 1,7" fill="#60a5fa"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <polygon points="1,1 7,4 1,7" fill="#2dd4bf"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <polygon points="1,1 7,4 1,7" fill="#f87171"/>
+    </marker>
+
+    <!-- Filter for soft glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 800; font-size: 32px; fill: #ffffff; text-anchor: middle; letter-spacing: 0.5px; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 400; font-size: 16px; fill: #94a3b8; text-anchor: middle; letter-spacing: 0.2px; }
+    .card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.4px; }
+    .badge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.8px; }
+    .body-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 400; font-size: 16px; fill: #e2e8f0; }
+    .flow-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-style: italic; font-weight: 500; font-size: 14.5px; text-anchor: middle; }
+    .code-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 14.5px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="900" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.07" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="0" y1="700" x2="1200" y2="700"/>
+    <line x1="0" y1="800" x2="1200" y2="800"/>
+    <line x1="150" y1="0" x2="150" y2="900"/>
+    <line x1="300" y1="0" x2="300" y2="900"/>
+    <line x1="450" y1="0" x2="450" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="750" y1="0" x2="750" y2="900"/>
+    <line x1="900" y1="0" x2="900" y2="900"/>
+    <line x1="1050" y1="0" x2="1050" y2="900"/>
+  </g>
+
+  <!-- HEADER -->
+  <text x="600" y="44" class="title">GridPulse 330: DevOps Power Grid Telemetry &amp; Alert Console</text>
+  <text x="600" y="70" class="subtitle">Executive-level Technical System Architecture and &amp; Data Flow</text>
+
+  <!-- ==================== LEVEL 1: METEOROLOGICAL RADAR ==================== -->
+  <g transform="translate(60, 92)">
+    <!-- Main Card Body -->
+    <rect width="1080" height="96" rx="14" fill="url(#card1Grad)" stroke="#3b82f6" stroke-width="1.8"/>
+    
+    <!-- Left Icon Pod -->
+    <rect x="14" y="12" width="180" height="72" rx="10" fill="#07182c" stroke="#1e40af" stroke-width="1.2"/>
+    <!-- Radar dish / cloud / lightning icon symbols -->
+    <g transform="translate(30, 24)" stroke="#60a5fa" stroke-width="2" fill="none">
+      <!-- Radar Dish -->
+      <path d="M 12 36 A 22 22 0 0 1 34 14" stroke-linecap="round"/>
+      <path d="M 18 36 A 14 14 0 0 1 32 22" stroke-linecap="round"/>
+      <circle cx="12" cy="36" r="3" fill="#60a5fa"/>
+      <!-- Cloud -->
+      <path d="M 68 34 H 92 A 10 10 0 0 0 92 14 A 14 14 0 0 0 68 14 A 10 10 0 0 0 68 34 Z" fill="#1e3a8a" opacity="0.6"/>
+      <!-- Lightning -->
+      <polygon points="120,14 112,28 122,28 116,44 132,24 122,24" fill="#fbbf24" stroke="#f59e0b" stroke-width="1"/>
+      <!-- Wireless Waves -->
+      <path d="M 148 24 A 12 12 0 0 1 148 38" stroke-linecap="round"/>
+      <path d="M 154 18 A 20 20 0 0 1 154 44" stroke-linecap="round"/>
+    </g>
+
+    <!-- Title & Badge -->
+    <text x="216" y="40" class="card-title" fill="#bfdbfe">1. METEOROLOGICAL RADAR &amp; FORECAST DATA INGEST</text>
+    <rect x="965" y="24" width="95" height="25" rx="12" fill="#1d4ed8" stroke="#3b82f6" stroke-width="1"/>
+    <text x="1012" y="41" class="badge" fill="#ffffff" text-anchor="middle">LEVEL 1</text>
+
+    <!-- Details -->
+    <text x="216" y="68" class="body-text">
+      <tspan fill="#60a5fa">•</tspan> Convective storm tracking, lightning density, ambient temp, wind shear.
+    </text>
+  </g>
+
+  <!-- Flow Connector 1 -> 2 -->
+  <g transform="translate(600, 194)">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#60a5fa" stroke-width="2.5" stroke-dasharray="4,4"/>
+    <polygon points="-5,38 5,38 0,46" fill="#60a5fa"/>
+    <rect x="-135" y="8" width="270" height="24" rx="6" fill="#0b1e38" stroke="#1d4ed8" stroke-width="1"/>
+    <text x="0" y="25" class="flow-label" fill="#93c5fd">(Anticipated Weather State)</text>
+  </g>
+
+  <!-- ==================== LEVEL 2: SCADA TELEMETRY & PHYSICAL MODEL ==================== -->
+  <g transform="translate(60, 246)">
+    <!-- Main Card Body -->
+    <rect width="1080" height="186" rx="14" fill="url(#card2Grad)" stroke="#06b6d4" stroke-width="1.8"/>
+
+    <!-- Left Icon Pod -->
+    <rect x="14" y="14" width="180" height="158" rx="10" fill="#041d24" stroke="#0e7490" stroke-width="1.2"/>
+    <!-- Transmission Pylon & Waveform Graphic -->
+    <g transform="translate(24, 28)" stroke="#22d3ee" stroke-width="1.8" fill="none">
+      <!-- Transmission Tower Left -->
+      <polygon points="45,12 55,12 65,110 35,110" stroke="#22d3ee" stroke-width="2"/>
+      <line x1="25" y1="35" x2="75" y2="35"/>
+      <line x1="20" y1="60" x2="80" y2="60"/>
+      <line x1="15" y1="85" x2="85" y2="85"/>
+      <line x1="40" y1="35" x2="60" y2="60"/>
+      <line x1="60" y1="35" x2="40" y2="60"/>
+      <line x1="38" y1="60" x2="62" y2="85"/>
+      <line x1="62" y1="60" x2="38" y2="85"/>
+      <!-- Waveform right -->
+      <path d="M 100 65 Q 115 25 130 65 T 160 65" stroke="#38bdf8" stroke-width="2.5"/>
+      <circle cx="100" cy="65" r="3" fill="#38bdf8"/>
+      <circle cx="160" cy="65" r="3" fill="#38bdf8"/>
+      <!-- Digital Frequency display -->
+      <rect x="95" y="88" width="68" height="24" rx="4" fill="#083344" stroke="#0891b2"/>
+      <text x="129" y="104" font-family="monospace" font-size="11" fill="#67e8f9" text-anchor="middle">50.00Hz</text>
+    </g>
+
+    <!-- Title & Badge -->
+    <text x="216" y="44" class="card-title" fill="#a5f3fc">2. GRID SCADA TELEMETRY &amp; PHYSICAL MODEL</text>
+    <rect x="965" y="26" width="95" height="25" rx="12" fill="#0891b2" stroke="#06b6d4" stroke-width="1"/>
+    <text x="1012" y="43" class="badge" fill="#ffffff" text-anchor="middle">LEVEL 2</text>
+
+    <!-- Detailed Bullet Points -->
+    <g transform="translate(216, 74)">
+      <text x="0" y="0" class="body-text"><tspan fill="#22d3ee">•</tspan> 330 kV Bulk Transmission Corridors (Double Circuit Lines 1 &amp; 2)</text>
+      <text x="0" y="27" class="body-text"><tspan fill="#22d3ee">•</tspan> System Bus Voltage (Nominal 330.0 kV, Statutory: 313.5 - 340.0 kV)</text>
+      <text x="0" y="54" class="body-text"><tspan fill="#22d3ee">•</tspan> System Frequency (Nominal 50.00 Hz, Statutory: 49.80 - 50.20 Hz)</text>
+      <text x="0" y="81" class="body-text"><tspan fill="#22d3ee">•</tspan> Active / Reactive Power Balance (Generation MW vs. Load Demand MW, MVAR)</text>
+    </g>
+  </g>
+
+  <!-- Flow Connector 2 -> 3 -->
+  <g transform="translate(600, 438)">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#2dd4bf" stroke-width="2.5" stroke-dasharray="4,4"/>
+    <polygon points="-5,38 5,38 0,46" fill="#2dd4bf"/>
+    <rect x="-115" y="8" width="230" height="24" rx="6" fill="#072b2c" stroke="#0d9488" stroke-width="1"/>
+    <text x="0" y="25" class="flow-label" fill="#5eead4">(Telemetry Stream)</text>
+  </g>
+
+  <!-- ==================== LEVEL 3: THRESHOLD & CONTINGENCY RULE ENGINE ==================== -->
+  <g transform="translate(60, 490)">
+    <!-- Main Card Body -->
+    <rect width="1080" height="162" rx="14" fill="url(#card3Grad)" stroke="#ef4444" stroke-width="1.8"/>
+
+    <!-- Left Icon Pod -->
+    <rect x="14" y="14" width="180" height="134" rx="10" fill="#23060a" stroke="#991b1b" stroke-width="1.2"/>
+    <!-- Siren / Alarm Graphic -->
+    <g transform="translate(30, 26)">
+      <!-- Emergency Beacon Siren -->
+      <path d="M 35 70 L 65 70 L 60 40 A 15 15 0 0 0 40 40 Z" fill="#ef4444" stroke="#f87171" stroke-width="2"/>
+      <rect x="30" y="70" width="40" height="12" rx="2" fill="#7f1d1d" stroke="#b91c1c"/>
+      <!-- Light rays -->
+      <line x1="30" y1="30" x2="18" y2="20" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
+      <line x1="50" y1="20" x2="50" y2="8" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
+      <line x1="70" y1="30" x2="82" y2="20" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
+      <!-- Alert Gauges -->
+      <rect x="100" y="25" width="55" height="10" rx="4" fill="#450a0a" stroke="#dc2626"/>
+      <rect x="100" y="25" width="45" height="10" rx="4" fill="#ef4444"/>
+      <rect x="100" y="45" width="55" height="10" rx="4" fill="#450a0a" stroke="#dc2626"/>
+      <rect x="100" y="45" width="50" height="10" rx="4" fill="#f87171"/>
+      <rect x="100" y="65" width="55" height="10" rx="4" fill="#450a0a" stroke="#f59e0b"/>
+      <rect x="100" y="65" width="40" height="10" rx="4" fill="#fbbf24"/>
+    </g>
+
+    <!-- Title & Badge -->
+    <text x="216" y="44" class="card-title" fill="#fecaca">3. THRESHOLD &amp; CONTINGENCY RULE ENGINE</text>
+    <rect x="965" y="26" width="95" height="25" rx="12" fill="#b91c1c" stroke="#ef4444" stroke-width="1"/>
+    <text x="1012" y="43" class="badge" fill="#ffffff" text-anchor="middle">LEVEL 3</text>
+
+    <!-- Detailed Bullet Points -->
+    <g transform="translate(216, 74)">
+      <text x="0" y="0" class="body-text">
+        <tspan fill="#f87171">•</tspan> <tspan font-weight="600" fill="#fca5a5">Rule V-HIGH:</tspan> If Voltage &gt;= 340.0 kV -&gt; High Overvoltage Alarm (Ferranti Risk)
+      </text>
+      <text x="0" y="28" class="body-text">
+        <tspan fill="#f87171">•</tspan> <tspan font-weight="600" fill="#fca5a5">Rule F-HIGH:</tspan> If Frequency &gt;= 51.00 Hz -&gt; High Frequency Alarm (Load Rejection)
+      </text>
+      <text x="0" y="56" class="body-text">
+        <tspan fill="#f87171">•</tspan> <tspan font-weight="600" fill="#fca5a5">Rule N-1 TRIP:</tspan> Lightning trip on Line 1 -&gt; Parallel Line 2 Overload Warning ⚠️
+      </text>
+    </g>
+  </g>
+
+  <!-- Flow Connector 3 -> 4 -->
+  <g transform="translate(600, 658)">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#f87171" stroke-width="2.5" stroke-dasharray="4,4"/>
+    <polygon points="-5,38 5,38 0,46" fill="#f87171"/>
+    <rect x="-140" y="8" width="280" height="24" rx="6" fill="#350f14" stroke="#b91c1c" stroke-width="1"/>
+    <text x="0" y="25" class="flow-label" fill="#fca5a5">(Alarm &amp; Advisory Dispatch)</text>
+  </g>
+
+  <!-- ==================== LEVEL 4: OPERATOR REMEDIATION & DISPATCH ACTION ==================== -->
+  <g transform="translate(60, 710)">
+    <!-- Main Card Body -->
+    <rect width="1080" height="170" rx="14" fill="url(#card4Grad)" stroke="#f59e0b" stroke-width="1.8"/>
+
+    <!-- Left Icon Pod -->
+    <rect x="14" y="14" width="180" height="142" rx="10" fill="#201404" stroke="#b45309" stroke-width="1.2"/>
+    <!-- Dispatch Desk / Dual Monitor SCADA Console -->
+    <g transform="translate(32, 28)">
+      <!-- Desk Base -->
+      <polygon points="15,85 130,85 120,98 25,98" fill="#78350f" stroke="#b45309"/>
+      <!-- Dual Monitors -->
+      <rect x="22" y="32" width="46" height="34" rx="3" fill="#172554" stroke="#3b82f6" stroke-width="1.5"/>
+      <rect x="76" y="32" width="46" height="34" rx="3" fill="#172554" stroke="#10b981" stroke-width="1.5"/>
+      <line x1="45" y1="66" x2="45" y2="85" stroke="#94a3b8" stroke-width="2"/>
+      <line x1="99" y1="66" x2="99" y2="85" stroke="#94a3b8" stroke-width="2"/>
+      <!-- Mini graphs inside monitors -->
+      <polyline points="26,55 35,42 45,50 60,38" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+      <polyline points="80,52 90,40 102,48 116,36" fill="none" stroke="#34d399" stroke-width="1.5"/>
+      <!-- Pushbuttons on Console -->
+      <circle cx="50" cy="91" r="3.5" fill="#ef4444"/>
+      <circle cx="72" cy="91" r="3.5" fill="#10b981"/>
+      <circle cx="94" cy="91" r="3.5" fill="#f59e0b"/>
+    </g>
+
+    <!-- Title & Badge -->
+    <text x="216" y="44" class="card-title" fill="#fde68a">4. OPERATOR REMEDIATION &amp; DISPATCH ACTION</text>
+    <rect x="965" y="26" width="95" height="25" rx="12" fill="#d97706" stroke="#f59e0b" stroke-width="1"/>
+    <text x="1012" y="43" class="badge" fill="#ffffff" text-anchor="middle">LEVEL 4</text>
+
+    <!-- Detailed Remedial Steps -->
+    <g transform="translate(216, 72)">
+      <text x="0" y="0" class="body-text">
+        <tspan fill="#f59e0b">•</tspan> <tspan font-weight="600" fill="#fef08a">Action A:</tspan> Switch IN 330 kV 150 MVAR Shunt Reactor (suppress voltage to ~333kV)
+      </text>
+      <text x="0" y="26" class="body-text">
+        <tspan fill="#f59e0b">•</tspan> <tspan font-weight="600" fill="#fef08a">Action B:</tspan> Fast Turbine Governor De-load (-400 MW, restore 50.00 Hz frequency)
+      </text>
+      <text x="0" y="52" class="body-text">
+        <tspan fill="#f59e0b">•</tspan> <tspan font-weight="600" fill="#fef08a">Action C:</tspan> Post-deionization Synchro-check auto-reclose on Line 1
+      </text>
+      <text x="0" y="78" class="body-text">
+        <tspan fill="#f59e0b">•</tspan> Sequence of Events (SOE) timestamped audit logging
+      </text>
+    </g>
+  </g>
+</svg>
