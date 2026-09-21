@@ -32,6 +32,26 @@ GridPulse 330 addresses this operational challenge by coupling **anticipatory me
 
 ---
 
+## Production Interface & Live Operator Console
+
+### 1. System Onboarding & Operational Guidelines
+<div align="center">
+  <img src="gridpulse-welcome-modal.png" alt="GridPulse 330: Welcome to GridPulse 330 Onboarding & Engineering Overview" width="100%" />
+</div>
+
+*Figure 2: Welcome to GridPulse 330 — Interactive onboarding overview detailing meteorological telemetry ingestion, statutory 330 kV / 50.00 Hz alarm guardrails, and operator remedial dispatch playbooks.*
+
+<br/>
+
+### 2. Live DevOps Telemetry & Contingency Management Console (Real UI)
+<div align="center">
+  <img src="gridpulse-telemetry-console.png" alt="GridPulse 330: Live Production SCADA / EMS Telemetry & Contingency Management Console" width="100%" />
+</div>
+
+*Figure 3: Production Operator Console (Real UI) — Synchronous 50.00 Hz frequency & 330 kV bus voltage telemetry gauges, meteorological contingency Doppler radar matrix, dual-circuit differential line protection, and closed-loop restoration console.*
+
+---
+
 ## The Engineering Problem: High-Voltage Grid Volatility
 
 When bulk transmission corridors experience unexpected severe weather events, standard monitoring dashboards fail to equip operators with causal clarity. GridPulse 330 models two foundational electrical phenomena:

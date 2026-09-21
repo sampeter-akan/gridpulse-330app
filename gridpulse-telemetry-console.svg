@@ -1,0 +1,413 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="1200" height="850">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="mainBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#080f1e"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+
+    <!-- Card Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#090e17"/>
+    </linearGradient>
+
+    <!-- Active Weather Gradient -->
+    <linearGradient id="stormGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#450a0a"/>
+      <stop offset="100%" stop-color="#1f0707"/>
+    </linearGradient>
+
+    <!-- Gauge Normal Gradient -->
+    <linearGradient id="gaugeEmerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+
+    <!-- Gauge Cyan Gradient -->
+    <linearGradient id="gaugeCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <!-- Action Button Gradient Cyan -->
+    <linearGradient id="actionCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e7490"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+
+    <!-- Action Button Gradient Amber -->
+    <linearGradient id="actionAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+
+    <!-- Subtle Glow Filter -->
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+
+  <!-- CANVAS BACKGROUND -->
+  <rect width="1200" height="850" fill="url(#mainBg)"/>
+
+  <!-- ==================== TOP NAVIGATION / HEADER BAR ==================== -->
+  <g class="font-sans">
+    <rect width="1200" height="62" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- Brand Logo / Zap Icon -->
+    <g transform="translate(24, 13)">
+      <rect width="36" height="36" rx="8" fill="#082f49" stroke="#0284c7" stroke-width="1.2"/>
+      <polygon points="20,8 11,20 18,20 15,28 25,16 19,16" fill="#38bdf8"/>
+      
+      <text x="46" y="24" font-size="18" font-weight="900" fill="#ffffff" letter-spacing="1.2">GRIDPULSE <tspan fill="#38bdf8">330</tspan></text>
+      <text x="46" y="38" font-size="10.5" font-weight="600" fill="#94a3b8" letter-spacing="0.6">DEVOPS POWER GRID SCADA &amp; CONTINGENCY CONSOLE</text>
+    </g>
+
+    <!-- Center Badges (Frequency & Voltage Status) -->
+    <g transform="translate(540, 16)">
+      <!-- Frequency Badge -->
+      <rect width="136" height="30" rx="6" fill="#064e3b" stroke="#059669" stroke-width="1"/>
+      <circle cx="16" cy="15" r="4" fill="#34d399"/>
+      <text x="28" y="19" font-size="11" font-weight="700" fill="#a7f3d0" class="font-mono">50.02 Hz • STABLE</text>
+
+      <!-- 330kV Grid Code Nominal Pill -->
+      <g transform="translate(148, 0)">
+        <rect width="168" height="30" rx="6" fill="#082f49" stroke="#0284c7" stroke-width="1"/>
+        <circle cx="16" cy="15" r="4" fill="#38bdf8"/>
+        <text x="28" y="19" font-size="11" font-weight="700" fill="#bae6fd" class="font-mono">330.2 kV • NOMINAL</text>
+      </g>
+    </g>
+
+    <!-- Right Header Controls (Acoustic Siren, Lead Engineer) -->
+    <g transform="translate(940, 16)">
+      <!-- Audio Siren Status -->
+      <rect width="95" height="30" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <circle cx="15" cy="15" r="4" fill="#34d399"/>
+      <text x="26" y="19" font-size="10.5" font-weight="600" fill="#cbd5e1">SIREN ON</text>
+
+      <!-- Lead Engineer Pill -->
+      <g transform="translate(105, 0)">
+        <rect width="130" height="30" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="12" y="19" font-size="11" font-weight="700" fill="#38bdf8">S. Peter (Lead)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== ROW 1: METEOROLOGICAL CONTINGENCY RADAR ==================== -->
+  <g transform="translate(24, 76)" filter="url(#cardGlow)" class="font-sans">
+    <rect width="1152" height="152" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+
+    <!-- Section Title & Status -->
+    <text x="20" y="26" font-size="12" font-weight="800" fill="#38bdf8" letter-spacing="0.8">METEOROLOGICAL CONTINGENCY MATRIX</text>
+    <rect x="256" y="13" width="130" height="20" rx="4" fill="#1e293b"/>
+    <text x="264" y="27" font-size="10" font-weight="700" fill="#94a3b8" class="font-mono">DOPPLER RADAR LIVE</text>
+    
+    <text x="20" y="44" font-size="11" fill="#94a3b8">
+      Simulate sudden atmospheric front shifts along the 330 kV transmission corridor (Clear Sunny → Convective Thunderstorm).
+    </text>
+
+    <!-- Weather Scenario Cards (4 Columns) -->
+    <!-- Card 1: Clear / Sunny -->
+    <g transform="translate(20, 56)">
+      <rect width="180" height="82" rx="8" fill="#0b1322" stroke="#1e293b" stroke-width="1"/>
+      <text x="14" y="24" font-size="12" font-weight="700" fill="#e2e8f0">Clear / Sunny</text>
+      <text x="14" y="42" font-size="10.5" fill="#64748b">Ambient: 34°C</text>
+      <text x="14" y="58" font-size="10.5" fill="#64748b">Wind: 12 km/h • Light</text>
+      <rect x="14" y="66" width="60" height="12" rx="3" fill="#064e3b"/>
+      <text x="44" y="75" font-size="8.5" font-weight="700" fill="#6ee7b7" text-anchor="middle">STABLE</text>
+    </g>
+
+    <!-- Card 2: Cloud Inversion -->
+    <g transform="translate(210, 56)">
+      <rect width="180" height="82" rx="8" fill="#0b1322" stroke="#1e293b" stroke-width="1"/>
+      <text x="14" y="24" font-size="12" font-weight="700" fill="#e2e8f0">Cloud Inversion</text>
+      <text x="14" y="42" font-size="10.5" fill="#64748b">Ambient: 26°C</text>
+      <text x="14" y="58" font-size="10.5" fill="#64748b">Wind: 22 km/h • PV Drop</text>
+      <rect x="14" y="66" width="68" height="12" rx="3" fill="#1e3a8a"/>
+      <text x="48" y="75" font-size="8.5" font-weight="700" fill="#93c5fd" text-anchor="middle">MODERATE</text>
+    </g>
+
+    <!-- Card 3: Gale Gusts -->
+    <g transform="translate(400, 56)">
+      <rect width="180" height="82" rx="8" fill="#0b1322" stroke="#1e293b" stroke-width="1"/>
+      <text x="14" y="24" font-size="12" font-weight="700" fill="#e2e8f0">Gale Gusts</text>
+      <text x="14" y="42" font-size="10.5" fill="#64748b">Ambient: 23°C</text>
+      <text x="14" y="58" font-size="10.5" fill="#64748b">Wind: 68 km/h • Oscillation</text>
+      <rect x="14" y="66" width="55" height="12" rx="3" fill="#854d0e"/>
+      <text x="41" y="75" font-size="8.5" font-weight="700" fill="#fde047" text-anchor="middle">CAUTION</text>
+    </g>
+
+    <!-- Card 4: Thunderstorm (ACTIVE/SELECTED CONTINGENCY) -->
+    <g transform="translate(590, 56)">
+      <rect width="260" height="82" rx="8" fill="url(#stormGrad)" stroke="#ef4444" stroke-width="1.8"/>
+      <circle cx="24" cy="22" r="5" fill="#ef4444"/>
+      <text x="36" y="26" font-size="12.5" font-weight="800" fill="#fecaca">Thunderstorm &amp; Heavy Rain</text>
+      <text x="16" y="46" font-size="10.5" fill="#fca5a5">Severe Lightning • Torrential Rain (45 mm/h)</text>
+      <text x="16" y="62" font-size="10.5" fill="#fca5a5">Acute Differential Trip &amp; Ferranti Surge Risk</text>
+      <rect x="16" y="67" width="130" height="12" rx="3" fill="#7f1d1d"/>
+      <text x="81" y="76" font-size="8.5" font-weight="800" fill="#fca5a5" text-anchor="middle">CRITICAL CONTINGENCY</text>
+    </g>
+
+    <!-- Trigger Event Action Button -->
+    <g transform="translate(870, 68)">
+      <rect width="260" height="58" rx="8" fill="#dc2626" stroke="#f87171" stroke-width="1.5"/>
+      <text x="130" y="27" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+        ⚡ TRIGGER NEXT-MOMENT EVENT
+      </text>
+      <text x="130" y="44" font-size="10" font-weight="600" fill="#fee2e2" text-anchor="middle">
+        Simulate Severe Storm &amp; Line 1 Fault
+      </text>
+    </g>
+  </g>
+
+  <!-- ==================== ROW 2: TELEMETRY GAUGES & GRID CODE GUARDRAILS ==================== -->
+  <g transform="translate(24, 242)" class="font-sans">
+    <!-- Card 1: 330kV Bus Voltage -->
+    <g filter="url(#cardGlow)">
+      <rect width="368" height="185" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      <text x="20" y="28" font-size="11.5" font-weight="700" fill="#94a3b8" letter-spacing="0.6">330 kV BUS VOLTAGE (SUBSTATION BUS A)</text>
+      
+      <!-- Voltage Big Digits -->
+      <text x="20" y="78" font-size="44" font-weight="900" fill="#38bdf8" class="font-mono">330.2</text>
+      <text x="160" y="64" font-size="18" font-weight="700" fill="#94a3b8">kV</text>
+
+      <!-- Status Pill -->
+      <rect x="236" y="48" width="112" height="26" rx="5" fill="#064e3b" stroke="#059669" stroke-width="1"/>
+      <text x="292" y="65" font-size="10.5" font-weight="700" fill="#6ee7b7" text-anchor="middle">NOMINAL (SAFE)</text>
+
+      <!-- Progress Meter -->
+      <rect x="20" y="100" width="328" height="10" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <rect x="20" y="100" width="190" height="10" rx="5" fill="url(#gaugeCyan)"/>
+
+      <!-- Scale Markers -->
+      <text x="20" y="128" font-size="9.5" fill="#64748b" class="font-mono">300 kV</text>
+      <text x="160" y="128" font-size="9.5" fill="#38bdf8" font-weight="700" class="font-mono">330 kV (Nominal)</text>
+      <text x="300" y="128" font-size="9.5" fill="#f87171" font-weight="700" class="font-mono">340 kV (MAX)</text>
+
+      <line x1="20" y1="142" x2="348" y2="142" stroke="#1e293b" stroke-width="1"/>
+      <text x="20" y="162" font-size="10.5" fill="#94a3b8">
+        Ferranti Guardrail: <tspan fill="#f87171" font-weight="700">&gt;340.0 kV</tspan> triggers Shunt Reactor alert.
+      </text>
+    </g>
+
+    <!-- Card 2: System Frequency -->
+    <g transform="translate(392, 0)" filter="url(#cardGlow)">
+      <rect width="368" height="185" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      <text x="20" y="28" font-size="11.5" font-weight="700" fill="#94a3b8" letter-spacing="0.6">SYNCHRONOUS GRID FREQUENCY</text>
+      
+      <!-- Frequency Big Digits -->
+      <text x="20" y="78" font-size="44" font-weight="900" fill="#34d399" class="font-mono">50.02</text>
+      <text x="165" y="64" font-size="18" font-weight="700" fill="#94a3b8">Hz</text>
+
+      <!-- Status Pill -->
+      <rect x="236" y="48" width="112" height="26" rx="5" fill="#064e3b" stroke="#059669" stroke-width="1"/>
+      <text x="292" y="65" font-size="10.5" font-weight="700" fill="#6ee7b7" text-anchor="middle">SYNCHRONIZED</text>
+
+      <!-- Progress Meter -->
+      <rect x="20" y="100" width="328" height="10" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <rect x="20" y="100" width="170" height="10" rx="5" fill="url(#gaugeEmerald)"/>
+
+      <!-- Scale Markers -->
+      <text x="20" y="128" font-size="9.5" fill="#f87171" font-weight="700" class="font-mono">49.0 Hz</text>
+      <text x="160" y="128" font-size="9.5" fill="#34d399" font-weight="700" class="font-mono">50.00 Hz (Target)</text>
+      <text x="295" y="128" font-size="9.5" fill="#f87171" font-weight="700" class="font-mono">51.00 Hz (MAX)</text>
+
+      <line x1="20" y1="142" x2="348" y2="142" stroke="#1e293b" stroke-width="1"/>
+      <text x="20" y="162" font-size="10.5" fill="#94a3b8">
+        Governor Droop: <tspan fill="#34d399" font-weight="700">4.0%</tspan> • Rotor Inertia Constant H: 4.5 s
+      </text>
+    </g>
+
+    <!-- Card 3: Real-Time Power Balance -->
+    <g transform="translate(784, 0)" filter="url(#cardGlow)">
+      <rect width="368" height="185" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      <text x="20" y="28" font-size="11.5" font-weight="700" fill="#94a3b8" letter-spacing="0.6">GENERATION VS DEMAND BALANCE</text>
+
+      <!-- Generation Row -->
+      <g transform="translate(20, 52)">
+        <text x="0" y="0" font-size="11" fill="#94a3b8">Total Grid Generation</text>
+        <text x="0" y="26" font-size="24" font-weight="800" fill="#f8fafc" class="font-mono">4,820 <tspan font-size="14" fill="#94a3b8">MW</tspan></text>
+      </g>
+
+      <!-- Demand Row -->
+      <g transform="translate(184, 52)">
+        <text x="0" y="0" font-size="11" fill="#94a3b8">Substation Demand</text>
+        <text x="0" y="26" font-size="24" font-weight="800" fill="#f8fafc" class="font-mono">4,818 <tspan font-size="14" fill="#94a3b8">MW</tspan></text>
+      </g>
+
+      <line x1="20" y1="94" x2="348" y2="94" stroke="#1e293b" stroke-width="1"/>
+
+      <!-- Metrics -->
+      <g transform="translate(20, 114)">
+        <text x="0" y="0" font-size="11" fill="#94a3b8">Active Balance ΔP:</text>
+        <text x="140" y="0" font-size="11" font-weight="700" fill="#34d399" class="font-mono">+2.0 MW (Equilibrium)</text>
+
+        <text x="0" y="20" font-size="11" fill="#94a3b8">Reactive Flow Q:</text>
+        <text x="140" y="20" font-size="11" font-weight="700" fill="#38bdf8" class="font-mono">+115.4 MVAR (Inductive)</text>
+
+        <text x="0" y="40" font-size="11" fill="#94a3b8">Spinning Reserve:</text>
+        <text x="140" y="40" font-size="11" font-weight="700" fill="#cbd5e1" class="font-mono">+450 MW (Ready)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== ROW 3: TRANSMISSION CORRIDORS & PROTECTION ==================== -->
+  <g transform="translate(24, 442)" class="font-sans">
+    <!-- Transmission Corridor Card Line 1 -->
+    <g filter="url(#cardGlow)">
+      <rect width="564" height="125" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      
+      <!-- Status Badge -->
+      <circle cx="28" cy="26" r="6" fill="#34d399"/>
+      <text x="44" y="30" font-size="13" font-weight="800" fill="#f8fafc">
+        330 kV Bulk Line 1 (Ikeja West – Oshogbo Corridor)
+      </text>
+      <rect x="448" y="16" width="98" height="22" rx="4" fill="#064e3b"/>
+      <text x="497" y="31" font-size="10" font-weight="700" fill="#6ee7b7" text-anchor="middle">ENERGIZED</text>
+
+      <!-- Line 1 Parameters -->
+      <g transform="translate(24, 52)" class="font-mono">
+        <rect width="160" height="56" rx="6" fill="#0b1322" stroke="#1e293b" stroke-width="1"/>
+        <text x="14" y="22" font-size="9.5" fill="#94a3b8" class="font-sans">Current Load</text>
+        <text x="14" y="44" font-size="17" font-weight="700" fill="#38bdf8">712 A</text>
+
+        <g transform="translate(176, 0)">
+          <rect width="160" height="56" rx="6" fill="#0b1322" stroke="#1e293b" stroke-width="1"/>
+          <text x="14" y="22" font-size="9.5" fill="#94a3b8" class="font-sans">Power Transfer</text>
+          <text x="14" y="44" font-size="17" font-weight="700" fill="#38bdf8">407 MW</text>
+        </g>
+
+        <g transform="translate(352, 0)">
+          <rect width="160" height="56" rx="6" fill="#0b1322" stroke="#1e293b" stroke-width="1"/>
+          <text x="14" y="22" font-size="9.5" fill="#94a3b8" class="font-sans">Thermal Capacity</text>
+          <text x="14" y="44" font-size="17" font-weight="700" fill="#34d399">49% (Safe)</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Transmission Corridor Card Line 2 -->
+    <g transform="translate(588, 0)" filter="url(#cardGlow)">
+      <rect width="564" height="125" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      
+      <!-- Status Badge -->
+      <circle cx="28" cy="26" r="6" fill="#34d399"/>
+      <text x="44" y="30" font-size="13" font-weight="800" fill="#f8fafc">
+        330 kV Bulk Line 2 (Ikeja West – Oshogbo Corridor)
+      </text>
+      <rect x="448" y="16" width="98" height="22" rx="4" fill="#064e3b"/>
+      <text x="497" y="31" font-size="10" font-weight="700" fill="#6ee7b7" text-anchor="middle">ENERGIZED</text>
+
+      <!-- Line 2 Parameters -->
+      <g transform="translate(24, 52)" class="font-mono">
+        <rect width="160" height="56" rx="6" fill="#0b1322" stroke="#1e293b" stroke-width="1"/>
+        <text x="14" y="22" font-size="9.5" fill="#94a3b8" class="font-sans">Current Load</text>
+        <text x="14" y="44" font-size="17" font-weight="700" fill="#38bdf8">708 A</text>
+
+        <g transform="translate(176, 0)">
+          <rect width="160" height="56" rx="6" fill="#0b1322" stroke="#1e293b" stroke-width="1"/>
+          <text x="14" y="22" font-size="9.5" fill="#94a3b8" class="font-sans">Power Transfer</text>
+          <text x="14" y="44" font-size="17" font-weight="700" fill="#38bdf8">405 MW</text>
+        </g>
+
+        <g transform="translate(352, 0)">
+          <rect width="160" height="56" rx="6" fill="#0b1322" stroke="#1e293b" stroke-width="1"/>
+          <text x="14" y="22" font-size="9.5" fill="#94a3b8" class="font-sans">Thermal Capacity</text>
+          <text x="14" y="44" font-size="17" font-weight="700" fill="#34d399">48% (Safe)</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== ROW 4: CLOSED-LOOP REMEDIAL ACTION CONSOLE ==================== -->
+  <g transform="translate(24, 582)" filter="url(#cardGlow)" class="font-sans">
+    <rect width="1152" height="110" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <text x="20" y="26" font-size="12" font-weight="800" fill="#f8fafc" letter-spacing="0.8">
+      OPERATOR DISPATCH REMEDIAL ACTION PLAYBOOK (CLOSED-LOOP RESTORATION)
+    </text>
+    <text x="680" y="26" font-size="11" fill="#94a3b8" class="font-mono">
+      SCADA INTERLOCK: ALL REMEDIAL SEQUENCES ARMED
+    </text>
+
+    <!-- Action 1: Shunt Reactor Switch -->
+    <g transform="translate(20, 42)">
+      <rect width="360" height="52" rx="7" fill="url(#actionCyan)" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="20" y="24" font-size="12" font-weight="800" fill="#ffffff">
+        Switch IN 330kV Shunt Reactor [150 MVAR]
+      </text>
+      <text x="20" y="40" font-size="10" fill="#e0f2fe">
+        Mitigates Ferranti Open-Circuit Overvoltage (&gt;340 kV)
+      </text>
+    </g>
+
+    <!-- Action 2: Fast Ramp-Down Generation -->
+    <g transform="translate(396, 42)">
+      <rect width="360" height="52" rx="7" fill="url(#actionAmber)" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="20" y="24" font-size="12" font-weight="800" fill="#ffffff">
+        Dispatch Fast Ramp-Down [-400 MW]
+      </text>
+      <text x="20" y="40" font-size="10" fill="#fef3c7">
+        Arrests Severe Turbine Rotor Overspeed (&gt;51.00 Hz)
+      </text>
+    </g>
+
+    <!-- Action 3: Line 1 Auto-Reclose -->
+    <g transform="translate(772, 42)">
+      <rect width="360" height="52" rx="7" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+      <text x="20" y="24" font-size="12" font-weight="800" fill="#cbd5e1">
+        Initiate Line 1 Auto-Reclose Sequence
+      </text>
+      <text x="20" y="40" font-size="10" fill="#64748b">
+        Synchrocheck verification &amp; dual corridor restoration
+      </text>
+    </g>
+  </g>
+
+  <!-- ==================== ROW 5: SCADA SEQUENCE OF EVENTS (SOE) LOG ==================== -->
+  <g transform="translate(24, 706)" filter="url(#cardGlow)" class="font-mono">
+    <rect width="1152" height="120" rx="10" fill="#020617" stroke="#1e293b" stroke-width="1.2"/>
+    
+    <!-- Title Bar -->
+    <g class="font-sans">
+      <rect width="1152" height="28" rx="10" fill="#0f172a"/>
+      <rect y="18" width="1152" height="10" fill="#0f172a"/>
+      <text x="20" y="19" font-size="11" font-weight="800" fill="#94a3b8" letter-spacing="0.6">
+        SCADA SEQUENCE OF EVENTS (SOE) AUDIT LOG
+      </text>
+      <text x="1030" y="19" font-size="10" font-weight="600" fill="#34d399">
+        ● BUFFER HEALTHY
+      </text>
+    </g>
+
+    <!-- Log Rows -->
+    <g transform="translate(20, 46)" font-size="11">
+      <!-- Row 1 -->
+      <text x="0" y="0" fill="#64748b">16:42:01.104</text>
+      <rect x="90" y="-11" width="48" height="15" rx="3" fill="#064e3b"/>
+      <text x="114" y="0" fill="#6ee7b7" font-weight="700" text-anchor="middle" font-size="9.5">INFO</text>
+      <text x="150" y="0" fill="#cbd5e1">Doppler radar reports convective front approaching Oshogbo corridor at 42 km/h.</text>
+
+      <!-- Row 2 -->
+      <g transform="translate(0, 22)">
+        <text x="0" y="0" fill="#64748b">16:42:04.288</text>
+        <rect x="90" y="-11" width="56" height="15" rx="3" fill="#1e3a8a"/>
+        <text x="118" y="0" fill="#93c5fd" font-weight="700" text-anchor="middle" font-size="9.5">TELEMETRY</text>
+        <text x="156" y="0" fill="#cbd5e1">330 kV Bus Voltage nominal at 330.2 kV; Synchronous frequency steady at 50.02 Hz.</text>
+      </g>
+
+      <!-- Row 3 -->
+      <g transform="translate(0, 44)">
+        <text x="0" y="0" fill="#64748b">16:42:07.892</text>
+        <rect x="90" y="-11" width="56" height="15" rx="3" fill="#082f49"/>
+        <text x="118" y="0" fill="#38bdf8" font-weight="700" text-anchor="middle" font-size="9.5">SCADA</text>
+        <text x="156" y="0" fill="#cbd5e1">Circuits 1 &amp; 2 balanced; Line differential relays (ANSI 87L) armed with zero active alarms.</text>
+      </g>
+    </g>
+  </g>
+</svg>
