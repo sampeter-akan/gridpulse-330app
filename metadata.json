@@ -1,0 +1,6 @@
+{
+  "name": "GridPulse 330",
+  "description": "Real-time power grid monitoring and alert console tracking 330kV/50Hz telemetry, weather contingencies, transmission trips, and operator action protocols.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
